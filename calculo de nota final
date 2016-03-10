@@ -1,0 +1,35 @@
+# progra1
+// VOTA O NO.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+
+{
+   int p1,p2,p3,nf,nproyecto,npractica,notafinal;
+   cout<<"ingrese nota de primer parcial:" ;
+   cin>> p1;
+   cout<<"ingrese nota del segundo parcial:" ;
+   cin>> p2;
+   cout<<"ingrese nota del tercer parcial:";
+   cin>> p3;
+   cout<<"ingrese nota del examen final:";
+   cin>> nf;
+   cout<<"ingrese nota del proyecto:";
+   cin>> nproyecto;
+   cout<<"ingrese nota practica:";
+   cin>> npractica;
+   
+   notafinal= p1*0.15+p2*0.15+p3*0.15+nf*0.30+nproyecto*0.15+npractica*0.10;
+   cout<< "nota final es:"<<notafinal;
+
+	   if (p1,p2,p3,nf,nproyecto,npractica>=51); 
+	   cout<< "APROBO LA MATERIA!";
+   else
+	   cout<< "REPROBO LA MATERIA";
+   getch();
+}
