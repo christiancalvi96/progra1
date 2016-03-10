@@ -1,0 +1,11 @@
+# progra1
+Proceso VOTACION
+	Definir edad Como Entero
+	escribir "ingrese edad:" ; // letrero para que el usuario conozca el valor al ingresar
+Leer edad;
+	si edad >= 18 entonces 
+		escribir "puede votar"; 
+	FinSi
+	
+	
+FinProceso
