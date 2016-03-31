@@ -1,0 +1,51 @@
+
+void main()
+{
+   int opcion; 
+   float sb,sn;
+   do
+   {
+     cout << endl;
+     cout << "1.- Salario" << endl;
+     cout << "2.- Hola mundo" <<endl;
+	 cout << "0.- Salir" << endl;
+     cout << "Elige una opción: ";
+     cin >> opcion;
+
+	 switch (opcion)
+
+	{
+	    case 1: { int n,i;
+			
+		cout<< "ingrese la cantidad de empleados :"<<endl;
+		cin>>n;
+		for (i=1;i<=n;i++)
+		{
+			cout<< "ingresar salario bruto: "<<endl;
+			cin>> sb;
+			if (sb>=7000)
+				sn=sb-(IVA+AFP)*sb;
+			else 
+				sn=sb-(AFP*sb);
+			cout<< "el salario neto es: "<<endl;
+			cout<<sn<<endl;
+		}
+		getch();
+
+		case 2: { int edad;
+					
+		   cout<<"ingrese edad:" ;
+		   cin>> edad;
+		   if (edad >=18) 
+			   cout<< "puede votar:";
+		   else
+			   cout<< "no puede votar";
+		   getch();
+
+		case 0: 
+			{
+				cout<<"sali: ";
+
+
+	}
+ 
