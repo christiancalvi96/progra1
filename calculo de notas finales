@@ -1,0 +1,52 @@
+// notasfinales.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define parcial 0.1333
+#define examenfinal 0.40
+#define notapractica 0.20
+
+using namespace std;
+
+void main() 
+
+{
+	int alumnos,n;
+	float np,np1,np2,np3,examfinal,notaf;
+	cout<< "ingrese la cantidad de alumnos a los que desea calcular la nota final :"<<endl;
+	cin>>n;
+	cout<<endl;
+	for (alumnos=1;alumnos<=n;alumnos++)
+	{
+		cout<< "ingresar nota practica: "<<endl;
+		cin>> np;
+		cout<< (np*notapractica)<<endl;
+
+		cout<< "ingresar nota del primer parcial: "<<endl;
+		cin>> np1;
+		cout<< (np1*parcial);
+
+		cout<< "ingresar nota del segundo parcial: "<<endl;
+		cin>> np2;
+		cout<< (np2*parcial);
+        
+		cout<< "ingresar nota del tercer parcial: "<<endl;
+		cin>> np3;
+		cout<< (np3*parcial);
+
+		cout<< "ingresar nota final: "<<endl;
+		cin>> examfinal;
+		cout<< (examfinal*examenfinal);
+	{	
+		if 
+			(notaf=(examfinal*examenfinal)+(np3*parcial)+(np2*parcial)+(np1*parcial)+(np*notapractica)>=51)
+
+			cout<< "El alumno aprobo la materia con: "<<notaf;
+		else 
+			cout<< "El alumno reprobo la materia con: "<<notaf;
+	}
+	getch();
+}
