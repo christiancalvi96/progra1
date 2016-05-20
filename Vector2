@@ -1,0 +1,59 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar (double a[], int tam);
+void mostrar (double a[], int tam);
+double promedio( double a[], int tam);
+void burbuja(double a[], int tam);
+
+void main()
+{
+	int n;
+	double notas[MAX],prom;
+	do{
+		cout<<"Ingrese el numero de elementos: ";
+		cin>>n;
+	}while ((n<=0) || (n>100));
+
+	cargar (notas,n);
+	burbuja (notas ,n);
+	prom=promedio(notas,n);
+	cout<<"el promedio es: "<<prom;
+	getch();
+}
+void cargar (double a[], int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+		cout<<"V["<<i<<"]= ";
+		cin>>a[i];
+	}
+}
+void mostrar (double a[], int tam)
+{
+	double n=0;
+	for(int i=0;i<tam;i++)
+		cout<< "V["<<i<<"]= "<<a[i]<<endl;
+}
+double promedio( double a[], int tam)
+{
+	double n=0;
+	for(int i=0;i<tam;i++)
+		n=n+a[i];
+	return (n/tam);
+}
+
+void burbuja(double a[], int tam)
+{
+	for(int i=0;i<tam-1;i++)
+		for(int j=i+1;j<tam;j++)
+			if(a[i]>a[j]){
+				int tam=a[i];
+				a[i]=a[j];
+				a[j]=tam;
+			}
+}
